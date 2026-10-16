@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Prompt Optimizer for ChatGPT, Claude &amp; Gemini</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font: 15px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #f6f7f9; color: #1f2430; padding: 48px 20px;
+  }
+  .page { max-width: 760px; margin: 0 auto; background: #fff; border: 1px solid #e6e8ec; border-radius: 14px; padding: 44px 48px; box-shadow: 0 2px 14px rgba(20,30,60,.05); }
+  .badge { display: inline-flex; align-items: center; gap: 8px; background: #eef4ff; color: #2f6df6; border: 1px solid #d6e2fb; border-radius: 999px; padding: 5px 14px; font-size: 12.5px; font-weight: 600; margin-bottom: 18px; }
+  h1 { font-size: 24px; letter-spacing: -0.3px; margin-bottom: 6px; }
+  .updated { color: #8a90a0; font-size: 13px; margin-bottom: 28px; }
+  .summary { background: #f0faf5; border: 1px solid #c9e8d8; border-radius: 10px; padding: 16px 20px; margin-bottom: 30px; }
+  .summary strong { color: #157a52; }
+  h2 { font-size: 16px; margin: 26px 0 8px; }
+  p { margin-bottom: 10px; color: #333a47; }
+  ul { margin: 0 0 12px 20px; color: #333a47; }
+  li { margin-bottom: 5px; }
+  code { background: #f1f3f7; border-radius: 5px; padding: 1px 6px; font: 12.5px ui-monospace, Menlo, monospace; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-size: 13.5px; }
+  th, td { border: 1px solid #e6e8ec; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; font-weight: 600; }
+  .foot { margin-top: 34px; padding-top: 18px; border-top: 1px solid #eef0f3; color: #8a90a0; font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="badge">✦ Prompt Optimizer for ChatGPT, Claude &amp; Gemini</div>
+  <h1>Privacy Policy</h1>
+  <div class="updated">Effective date: October 16, 2026</div>
+
+  <div class="summary">
+    <strong>Short version:</strong> Prompt Optimizer does not collect, store, or transmit any of your personal data to us. The extension runs entirely in your browser. Your API key stays on your device, and the text you optimize is sent directly from your browser to the AI provider you choose — never through any server of ours.
+  </div>
+
+  <h2>1. What this extension does</h2>
+  <p>Prompt Optimizer adds a one-click "Optimize" button next to the message composer on ChatGPT, Claude, and Gemini. When you click it, your draft prompt is rewritten using an AI model of your choice, and you can review a before/after diff before applying the result. It is a browser-side tool only; there is no companion website or account system.</p>
+
+  <h2>2. Data we collect</h2>
+  <p><strong>None.</strong> The developer of Prompt Optimizer does not collect, receive, log, sell, or share any personal information, usage statistics, analytics, or telemetry. There is no tracking code, no advertising SDK, and no third-party analytics in this extension.</p>
+
+  <h2>3. Your API key</h2>
+  <p>Prompt Optimizer uses a "bring your own key" (BYOK) model. You paste your own API key from OpenAI, Anthropic, or Google into the extension's settings page. The key is stored only in <code>chrome.storage.sync</code> on your own device (synced by Chrome to your own Google account if you have sync enabled). It is never sent to the developer or any third party other than the API provider you selected.</p>
+
+  <h2>4. Text you optimize</h2>
+  <p>When you click "Optimize", the text currently in the composer box is sent directly from your browser over HTTPS to the API endpoint of the provider you configured (for example <code>api.openai.com</code>). It does not pass through any intermediate server. How that provider handles your data is governed by their privacy policy:</p>
+  <ul>
+    <li>OpenAI — <a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a></li>
+    <li>Anthropic — <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></li>
+    <li>Google — <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a></li>
+  </ul>
+
+  <h2>5. Free usage counter</h2>
+  <p>The free version allows a limited number of optimizations per day. The counter is stored locally in <code>chrome.storage.local</code> on your device and is never transmitted anywhere. Pro licenses are validated by a local format check of the license key you enter.</p>
+
+  <h2>6. Browser permissions and why they are needed</h2>
+  <table>
+    <tr><th>Permission</th><th>Why it is required</th></tr>
+    <tr><td><code>storage</code></td><td>To save your settings (provider, model, API key) and the daily free-usage counter on your device.</td></tr>
+    <tr><td>Host access to <code>chatgpt.com</code>, <code>claude.ai</code>, <code>gemini.google.com</code></td><td>To inject the "Optimize" button into the message composer on those three sites.</td></tr>
+    <tr><td>Host access to <code>api.openai.com</code>, <code>api.anthropic.com</code>, <code>generativelanguage.googleapis.com</code></td><td>To send your optimization request directly from the background service worker to the AI provider you chose.</td></tr>
+  </table>
+  <p>The extension does not read, collect, or transmit page content, browsing history, or any data beyond the text you explicitly submit for optimization.</p>
+
+  <h2>7. Data retention and deletion</h2>
+  <p>Because no data is collected by the developer, there is nothing for us to retain or delete. Your settings and usage counter live only on your device and are removed when you uninstall the extension. You can clear your API key at any time from the settings page.</p>
+
+  <h2>8. Children's privacy</h2>
+  <p>The extension is not directed to children under 13 and collects no data from any user, of any age.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be published at this URL with a new effective date. Material changes will also be announced in the extension's Chrome Web Store listing.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions about this policy? Open an issue on the project's GitHub repository: <a href="https://github.com/lq92965/prompt-optimizer-privacy">github.com/lq92965/prompt-optimizer-privacy</a>.</p>
+
+  <div class="foot">Prompt Optimizer for ChatGPT, Claude &amp; Gemini · Published by an independent developer on the Chrome Web Store. This policy applies only to the browser extension, not to the AI providers' own services.</div>
+</div>
+</body>
+</html>
